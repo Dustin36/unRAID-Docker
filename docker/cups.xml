@@ -27,7 +27,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/cups</HostDir>
+      <HostDir>/mnt/user/appdata/cups/config</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -55,7 +55,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cups" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cups</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cups/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cups/config</Config>
   <Config Name="Services" Target="/services" Default="/mnt/user/appdata/cups/services" Mode="rw" Description="Container Path: /services" Type="Path" Display="true" Required="false" Mask="false">/mnt/user/appdata/cups/services</Config>
   <Config Name="Admin Username" Target="CUPSADMIN" Default="print" Mode="" Description="Container Variable: CUPSADMIN" Type="Variable" Display="always" Required="false" Mask="false">print</Config>
   <Config Name="Admin Password" Target="CUPSPASSWORD" Default="print" Mode="" Description="Container Variable: CUPSPASSWORD" Type="Variable" Display="always" Required="false" Mask="false">print</Config>
