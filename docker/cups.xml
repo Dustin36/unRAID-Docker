@@ -17,22 +17,28 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1615160718</DateInstalled>
+  <DateInstalled>1615163286</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description/>
   <Networking>
     <Mode>host</Mode>
+    <Publish/>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/cups/config</HostDir>
+      <HostDir>/mnt/user/appdata/cups</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/cups/services</HostDir>
       <ContainerDir>/services</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/dbus</HostDir>
+      <ContainerDir>/var/run/dbus</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -49,10 +55,11 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cups/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cups/config</Config>
-  <Config Name="Services" Target="/services" Default="/mnt/user/appdata/cups/services" Mode="rw" Description="Container Path: /services" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cups/services</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cups" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cups</Config>
+  <Config Name="Services" Target="/services" Default="/mnt/user/appdata/cups/services" Mode="rw" Description="Container Path: /services" Type="Path" Display="true" Required="false" Mask="false">/mnt/user/appdata/cups/services</Config>
   <Config Name="Admin Username" Target="CUPSADMIN" Default="print" Mode="" Description="Container Variable: CUPSADMIN" Type="Variable" Display="always" Required="false" Mask="false">print</Config>
   <Config Name="Admin Password" Target="CUPSPASSWORD" Default="print" Mode="" Description="Container Variable: CUPSPASSWORD" Type="Variable" Display="always" Required="false" Mask="false">print</Config>
+  <Config Name="dbus" Target="/var/run/dbus" Default="/var/run/dbus" Mode="rw" Description="Container Path: /var/run/dbus" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/dbus</Config>
   <Config Name="USB" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="advanced" Required="true" Mask="false">/dev/usb</Config>
   <Config Name="BUS" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="advanced" Required="true" Mask="false">/dev/bus</Config>
 </Container>
